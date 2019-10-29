@@ -1,0 +1,11 @@
+
+  .module {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #3f525c;
+    border-radius: 2px;
+    height: 100px;
+  }
