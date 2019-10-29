@@ -12,6 +12,7 @@ describe('Heroes', () => {
     heroesPage
       .addHero('LocoMan')
       .expectHeroToBePresentWith('LocoMan')
+      .deleteHero('LocoMan')
   })
 
   it('Should delete a hero', () => {
