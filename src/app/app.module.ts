@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { ArchEnemyComponent } from './arch-enemy/arch-enemy.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    ArchEnemyComponent
   ],
   imports: [
     BrowserModule,
