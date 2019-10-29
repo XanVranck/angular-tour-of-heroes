@@ -1,4 +1,5 @@
 import { browser, by, element } from 'protractor';
+import { DashboardPage } from './dashboard.po';
 
 export class HeroesPage {
   navigateTo() {
@@ -29,6 +30,10 @@ export class HeroesPage {
       browser.isElementPresent(by.cssContainingText('ul.heroes li', name))
     ).toBeFalsy();
     return this;
+  }
+
+  navigateToDashboard(): DashboardPage {
+    return new DashboardPage().navigateTo();
   }
 
 }

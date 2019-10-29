@@ -22,4 +22,13 @@ describe('Heroes', () => {
       .deleteHero('DerpMan')
       .expectHeroNotToBePresentWith('DerpMan')
   })
+
+  it('Should delete top hero, should be removed from dashboard', () => {
+    let heroToBeDeleted = String(browser.findElement(by.css('ul.heroes-list')[1]));
+    heroesPage
+      .expectHeroToBePresentWith(heroToBeDeleted)
+      .deleteHero(heroToBeDeleted)
+      .navigateToDashboard()
+      .expectHeroNotInTopHeroes(heroToBeDeleted)
+  })
 });
