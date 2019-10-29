@@ -2,11 +2,24 @@ import { TestBed } from '@angular/core/testing';
 
 import { MessageService } from './message.service';
 
-describe('MessageService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+fdescribe('MessageService', () => {
+  let messageService: MessageService;
+  
+  beforeEach(() => {
+    messageService = new MessageService();
+  });
 
-  it('should be created', () => {
-    const service: MessageService = TestBed.get(MessageService);
-    expect(service).toBeTruthy();
+  it('should save message', () => {
+      messageService.add('test')
+
+      expect(messageService.messages).toEqual(['test']);
+  });
+
+  it('should clear messages', () => {
+      messageService.add('Herpa Derp')
+      expect(messageService.messages).toEqual(['Herpa Derp']);
+
+      messageService.clear()
+      expect(messageService.messages).toEqual([])
   });
 });
